@@ -1,0 +1,109 @@
+body {
+  background-image:url(material_picture\\top_pic.JPG);
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+  background-color:black;
+}
+
+.resize_title {
+position:absolute;
+left: 75vw;
+top: 75vh;
+width: 20vw;
+height: auto;
+z-index: 1;
+}
+
+.icon1 {
+position:absolute;
+left: 3vw;
+top: 90vh;
+width:3vw;
+height:auto;
+cursor:pointer;
+z-index: 1;
+}
+
+.icon2 {
+position:absolute;
+left: 8vw;
+top: 90vh;
+width:3vw;
+height:auto;
+cursor:pointer;
+z-index: 1;
+}
+
+.icon1:active,.icon2:active {
+position:absolute;
+margin-top:0.5vh;
+}
+
+#a-mark {
+display:block;
+position:absolute;
+top: 90vh;
+left: 14vw;
+width:2vw;
+height:auto;
+z-index: 2;
+}
+
+#n-mark {
+display:none;
+position:absolute;
+top: 90vh;
+left: 14vw;
+width:2vw;
+height:auto;
+z-index: 2;
+}
+
+#menu{
+  position:absolute;
+  overflow: hidden;
+  height: 0;
+  transition: 1s;
+}
+
+.list {
+position:absolute;
+left:18vw;
+top:87.5vh;
+font-family : serif;
+font-size:2vw;
+padding:0;
+color:white;
+z-index: 1;
+}
+
+.list:hover{
+position:absolute;
+top:88vh;
+background-color:rgba(255,255,255,0.2);
+border-radius:10px
+}
+
+.list:hover > #menu  {
+  position:absolute;
+  overflow:visible;
+  bottom:20vh;
+  list-style:none;
+  height:10px;
+  z-index: 1;
+}
+
+/*IE11に適用されるCSS*/
+_:-ms-lang(x)::-ms-backdrop, .list:hover > #menu  {
+  bottom:15vh;
+    height:5px;
+}
+
+#menu > li > a:hover  {
+color:black;
+cursor:pointer;
+background-color:rgba(255,255,255,0.8);
+border-radius:10px
+}
