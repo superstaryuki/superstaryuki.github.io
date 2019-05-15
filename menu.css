@@ -1,0 +1,239 @@
+body {
+background-image:url(material_picture\\menu_pic.JPG);
+background-position:center center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+background-color:rgba(0,0,0);
+position:relative;
+}
+
+/*IE11に適用されるCSS*/
+_:-ms-lang(x)::-ms-backdrop, body {
+background-color:#000000;
+}
+
+.p-select > h6 {
+  position:absolute;
+  left:28vw;
+  top:10vh;
+  z-index: 1;
+  font-family : serif;
+  color:rgba(0,0,0);
+  font-size:3vw;
+  width:auto;
+  text-shadow:2px 2px 1px rgba(255,255,255);
+}
+
+/*IE11に適用されるCSS*/
+_:-ms-lang(x)::-ms-backdrop, .p-select > h6 {
+  color:#000000;
+  text-shadow:2px 2px 1px #ffffff;
+}
+
+#d-select{
+  position:absolute;
+  top:10vh;
+}
+
+#o-select{
+  position:absolute;
+  top:25vh;
+}
+
+#q-select{
+  position:absolute;
+  top:40vh;
+}
+
+#d-select:hover ,#o-select:hover ,#q-select:hover{
+  color:white;
+  cursor:pointer;
+  background: linear-gradient(to top,rgba(255,255,255,0.2),rgba(192,192,192,0.1));
+  border-radius:1vh;
+}
+
+#o-select:active, #d-select:active,#q-select:active{
+  margin-top:13.5vh;
+}
+
+
+.doc{
+position:absolute;
+top:20vh;
+left:50vw;
+z-index: 1;
+font-family : "HG行書体", monospace;
+font-size:2.5vw;
+color:rgba(210,214,212);
+text-shadow:5px 5px 3px rgba(132,126,42);
+width:40vw;
+}
+
+/*IE11に適用されるCSS*/
+_:-ms-lang(x)::-ms-backdrop, .doc {
+  color:#d2d6d4;
+  text-shadow:5px 5px 3px #847e2a;
+}
+
+
+.doc p{
+  line-height:4vh;
+}
+
+#contact{
+  display:none;
+  position:absolute;
+  top:2vw;
+  left:25vh;
+  z-index:3;
+  width:68vw;
+  height:90vh;
+  background-color:rgba(10,10,10,0.8);
+  border-radius:5vw;
+}
+
+
+#contact  h3,h6 {
+  display:inline-block;
+  color:rgba(255,255,255);
+  font-family : "HG行書体", monospace;
+}
+
+/*IE11に適用されるCSS*/
+_:-ms-lang(x)::-ms-backdrop, #contact h3,h6 {
+  color:#ffffff;
+}
+
+#contact  h3{
+font-size:6vh
+}
+
+#contact  h6{
+font-size:3vh
+}
+
+
+#title{
+display:inline-block;
+position:absolute;
+top:-5vh;
+left:3vw;
+border-bottom:solid 0.5vh rgba(255,255,255);
+padding-bottom:2vh;
+}
+
+/*IE11に適用されるCSS*/
+_:-ms-lang(x)::-ms-backdrop, #title {
+  border-bottom:solid 0.5vh #ffffff;
+}
+
+#name{
+display:inline-block;
+position:absolute;
+top:10vh;
+left:3vw;
+}
+
+#iname{
+display:inline-block;
+position:absolute;
+top:25vh;
+left:3vw;
+font-family : "HG行書体", monospace;
+font-size:4vw;
+width:40vw;
+height:auto;
+}
+
+#san {
+display:inline-block;
+position:absolute;
+top:20vh;
+left:43vw;
+}
+
+#reply{
+display:inline-block;
+position:absolute;
+top:28vh;
+left:3vw;
+}
+
+#ireply{
+display:inline-block;
+position:absolute;
+top:40vh;
+left:3vw;
+font-family : "HG行書体", monospace;
+font-size:2vw;
+width:50vw;
+height:auto;
+}
+
+#detail{
+display:inline-block;
+position:absolute;
+top:40vh;
+left:3vw;
+}
+
+#idetail{
+display:inline-block;
+position:absolute;
+top:53vh;
+left:3vw;
+font-family : "HG行書体", monospace;
+font-size:2vw;
+width:60vw;
+height:18vh;
+}
+
+
+.form{
+font-family:"HG行書体",monospace;
+font-size:3vw;
+border-radius:3vh;
+background-color:rgba(255,255,255,0.8);
+}
+
+#send{
+position:absolute;
+top:75vh;
+left:20vw;
+width:8vw;
+height:8vh;
+}
+
+#mod{
+position:absolute;
+top:75vh;
+left:40vw;
+width:8vw;
+height:8vh;
+}
+
+#mod{
+position:absolute;
+top:75vh;
+left:40vw;
+width:8vw;
+height:8vh;
+}
+
+#cancel{
+position:absolute;
+top:70vh;
+left:50vw;
+width:8vw;
+height:8vh;
+background-color:transparent;
+}
+
+#send:hover,#mod:hover,#cancel:hover{
+cursor:pointer;
+}
+
+#cancel:active{
+margin-top:7.5vh;
+}

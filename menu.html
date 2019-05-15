@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>選択画面</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="menu.js"></script>
+  </head>
+  <body>
+    <form class="p-select">
+      <h6 id="d-select"><a src="daily.html">日記</a></h6>
+      <h6 id="o-select"><a src="daily.html">その他</a></h6>
+      <h6 id="q-select" onclick="q_select()" >申し言</h6>
+    </form>
+    <div class='doc'>
+        <p>東峰の果てへ</p>
+        <p class='doc_line'>自我の解放に目覚めたり</p>
+        <p class='doc_line'>今、我の道示したる</p>
+        <p class='doc_line'>いざ、進まん</p>
+    </div>
+    <form>
+      <div id='contact'>
+        <h3 id="title">申し言</h3>
+        <h3 id="name">お名前<span style="font-size:3vh;">(十文字以内)</span></h3>
+        <input type="text" maxlength=10  id="iname">
+        <h3 id="san">さん</h3>
+        <h6 id="reply">返信先(メールアドレス)</h6>
+        <input type="text"  id="ireply">
+        <h6 id="detail">記入欄<span style="font-size:3vh;">(百二十文字以内)</span></h6>
+        <textarea rows="4" cols="30" id="idetail" maxlength="120">ここに記入してください</textarea>
+        <input type="submit" class="form" id="send" value="送信" onClick=send()>
+        <input type="reset"  class="form" id="mod"  value="消去">
+        <h6 class="form" id="cancel" onclick="cancel()">閉じる</h6>
+      </div>
+    </form>
+  <script>
+  var target=document.getElementById("contact");
+  </script>
+
+    </body>
+  </html>
