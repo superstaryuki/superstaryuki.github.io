@@ -12,7 +12,11 @@
       $idetail=$_POST['idetail'];
       $ireply=$_POST['ireply'];
 
-      mail($to, $iname,$idetail, $ireply);
+      if(mb_send_mail($to, $iname,$idetail, $ireply)){
+        echo "メールを送信しました"
+      }else{
+        echo "メール送信に失敗しました"
+      };
     ?>
   </body>
 </html>
