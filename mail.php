@@ -13,7 +13,7 @@ try {
   //Gmail 認証情報
   $host = 'smtp.gmail.com';
   $username = 'superstaryuki@gmail.com'; // アカウント
-  $password = 'yyuukkii0711'; //パスワード
+  $password = '**********'; //パスワード
 
   //差出人
   $username = 'superstaryuki@gmail.com';
