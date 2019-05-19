@@ -1,35 +1,51 @@
-    <?php
-    ini_set('display_errors', true);
-    error_reporting(E_ALL);
-    
-    require_once(".\PHPMailer\src\PHPMailer.php");
-    use PHPMailer\PHPMailer\PHPMailer;
-    
-    $to='superstaryuki@gmail.com';
-    $subject=$_POST['ireply'];
-    $body=$_POST['idetail'];
-    $from='superstaryuki@gmail.com';
-    $fromname=$_POST['iname'];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    $mail=new PHPMailer();
-    
-    $mail->CharSet="iso-2022-jp";
-    $mail->Encoding="7bit";
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-    $mail->IsSMTP();      //SMTPサーバの使用
-    $mail->SMTPDebug = 1; //デバッグ
-    $mail->SMTPAuth = TRUE; //SMTP認証の使用
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Username = 'superstaryuki@gmail.com';
-    $mail->Password = 'yyuukkii0711'; 
-    $mail->Port=465;
-    
-    $mail->AddAddress($to);
-    $mail->From = $from;
-    $mail->FromName = mb_encode_mimeheader(mb_convert_encoding($fromname,"JIS","UTF-8"));
-    $mail->Subject = mb_encode_mimeheader(mb_convert_encoding($subject,"JIS","UTF-8"));
-    $mail->Body = mb_convert_encoding($body,"JIS","UTF-8");
 
-    //メールを送信
-    $mail->Send();
-    ?>
+$mail = new PHPMailer(true);
+
+try {
+  //Gmail 認証情報
+  $host = 'smtp.gmail.com';
+  $username = 'superstaryuki@gmail.com'; // アカウント
+  $password = 'yyuukkii0711'; //パスワード
+
+  //差出人
+  $username = 'superstaryuki@gmail.com';
+  $fromname = '$_POST['iname']';
+
+  //宛先
+  $to = 'superstaryuki@gmail.com';
+  $toname = '管理人へ';
+
+  //件名・本文
+  $subject=$_POST['ireply'];
+  $body=$_POST['idetail'];
+
+  //メール設定
+  $mail->SMTPDebug = 2; //デバッグ用
+  $mail->isSMTP();//SMTPサーバの使用
+  $mail->SMTPAuth = true;//SMTP認証の使用
+  $mail->Host = $host;
+  $mail->Username = $username;
+  $mail->Password = $password;
+  $mail->SMTPSecure = 'tls';//暗号化
+  $mail->Port = 465;//SMTP ポート
+  $mail->CharSet = "utf-8";
+  $mail->Encoding = "base64";
+  $mail->setFrom($from, $fromname);
+  $mail->addAddress($to, $toname);
+  $mail->Subject = $subject;
+  $mail->Body    = $body;
+
+  //メール送信
+  $mail->send();
+  echo '成功';
+
+} catch (Exception $e) {
+  echo '失敗: ', $mail->ErrorInfo;
+}
