@@ -4,9 +4,12 @@
   </head>
   <body>
     <?php
+    ini_set('display_errors', true);
+    error_reporting(E_ALL);
+    
     require_once(".\PHPMailer\src\PHPMailer.php");
-    mb_internal_encoding("UTF-8");
-
+    use PHPMailer\PHPMailer\PHPMailer;
+    
     $to='superstaryuki@gmail.com';
     $subject=$_POST['ireply'];
     $body=$_POST['idetail'];
@@ -14,15 +17,18 @@
     $fromname=$_POST['iname'];
 
     $mail=new PHPMailer();
+    
     $mail->CharSet="iso-2022-jp";
     $mail->Encoding="7bit";
 
     $mail->IsSMTP();      //SMTPサーバの使用
-    $mail->SMTPAuth=TRUE; //SMTP認証の使用
-    $mail->Host='smtp.gmail.com:465';
-    $mail->Username='superstaryuki@gmail.com';
-    $mail->Username='yyuukkii0711';
-
+    $mail->SMTPDebug = 1; //デバッグ
+    $mail->SMTPAuth = TRUE; //SMTP認証の使用
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Username = 'superstaryuki@gmail.com';
+    $mail->Password = 'yyuukkii0711'; 
+    $mail->Port=465;
+    
     $mail->AddAddress($to);
     $mail->From = $from;
     $mail->FromName = mb_encode_mimeheader(mb_convert_encoding($fromname,"JIS","UTF-8"));
