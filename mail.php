@@ -1,8 +1,3 @@
-<html>
-  <head>
-  <meta charset="utf-8">
-  </head>
-  <body>
     <?php
     ini_set('display_errors', true);
     error_reporting(E_ALL);
@@ -38,9 +33,3 @@
     //メールを送信
     $mail->Send();
     ?>
-
-
-
-
-  </body>
-</html>
