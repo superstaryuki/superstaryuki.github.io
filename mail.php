@@ -1,3 +1,4 @@
+<?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -49,3 +50,4 @@ try {
 } catch (Exception $e) {
   echo '失敗: ', $mail->ErrorInfo;
 }
+?>
