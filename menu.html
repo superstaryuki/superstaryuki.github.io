@@ -19,7 +19,7 @@
         <p class='doc_line'>今、我の道示したる</p>
         <p class='doc_line'>いざ、進まん</p>
     </div>
-    <form action="./mail.php" method="post">
+    <form action="./MAIL/mail.php" method="post">
       <div id='contact'>
         <h3 id="title">申し言</h3>
         <h3 id="name">お名前<span style="font-size:3vh;">(十文字以内)</span></h3>
@@ -29,7 +29,7 @@
         <input type="text"  name="ireply" id="ireply">
         <h6 id="detail">記入欄<span style="font-size:3vh;">(百二十文字以内)</span></h6>
         <textarea rows="4" cols="30" name="idetail" id="idetail" maxlength="120">ここに記入してください</textarea>
-        <input type="submit" class="form" name="send" id="send" value="送信" onClick=send()>
+        <input type="submit" class="form"  id="send" value="送信">
         <input type="reset"  class="form" id="mod"  value="消去">
         <h6 class="form" id="cancel" onclick="cancel()">閉じる</h6>
       </div>
